@@ -21,7 +21,7 @@ namespace SpaghettiAatrox.Modes
             var Rtarget = SpellManager.R.GetTarget();
             if (Config.ComboMenu["R"].Cast<CheckBox>().CurrentValue && SpellManager.R.CanCast(Rtarget) && (Rtarget.Health + Rtarget.AllShield < Program.myHero.GetSpellDamage(Rtarget, SpellSlot.R) || Rtarget.HealthPercent <= Config.ComboMenu["RHP"].Cast<Slider>().CurrentValue) && Program.myHero.CountEnemiesInRange(SpellManager.R.Range) >= Config.ComboMenu["RAround"].Cast<Slider>().CurrentValue)
             {
-                if (SpellManager.R.Cast(Rtarget)) return;
+                if (SpellManager.R.Cast()) return;
             }
 
             var Qtarget = SpellManager.Q.GetTarget();
