@@ -32,7 +32,7 @@ namespace SpaghettiAatrox.Modes
                 }
                 if (Config.KillstealMenu["R"].Cast<CheckBox>().CurrentValue && SpellManager.R.CanCast(enemy) && enemy.Health + enemy.AllShield < myHero.GetSpellDamage(enemy, SpellSlot.R))
                 {
-                  if (SpellManager.R.Cast(enemy)) return;
+                  if (SpellManager.R.Cast()) return;
                 }
             }
         }
