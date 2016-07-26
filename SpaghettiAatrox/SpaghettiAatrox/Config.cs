@@ -1,4 +1,4 @@
-using EloBuddy;
+﻿using EloBuddy;
 using EloBuddy.SDK.Menu;
 using EloBuddy.SDK.Menu.Values;
 
@@ -10,7 +10,6 @@ namespace SpaghettiAatrox
 
         public static void Init()
         {
-
             AatroxMenu = MainMenu.AddMenu("Spaghetti Series : Aatrox", "SpaghettiAatrox");
             AatroxMenu.AddLabel("A spaghetti code is almost impossible to debug and maintain, and rarely works well...");
             AatroxMenu.AddLabel("but somehow Spaghetti Series works flawlessly :P, and this was my first C# addon ^^");

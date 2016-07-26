@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using EloBuddy;
 using EloBuddy.SDK;
 using EloBuddy.SDK.Events;
@@ -16,7 +16,7 @@ namespace SpaghettiAatrox
             Loading.OnLoadingComplete += evt_OnLoad;
         }
 
-        public static AIHeroClient myHero = Player.Instance;
+        public static AIHeroClient myHero { get { return Player.Instance; } }
 
         private static void evt_OnLoad(EventArgs args)
         {
@@ -51,7 +51,7 @@ namespace SpaghettiAatrox
  
             PermaActive.Execute();
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Combo))
-                Combo.Execute();
+              Combo.Execute();
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass))
                 Harass.Execute();
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.LaneClear))
